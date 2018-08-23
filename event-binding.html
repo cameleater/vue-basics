@@ -1,0 +1,61 @@
+<html>
+
+<style>
+	.active {
+		color: green;
+
+	}
+
+	.inactive {
+		color: red;
+	}
+
+</style>
+
+
+  <div id="app">
+
+
+  	<button @click="increaseFont">increase button</button>
+  	<button @click="decreaseFont">decrease button</button>
+  	<h1 @click="increaseFont" class="foo" :class="[isActive ? 'active' : 'inactive']" :style="{fontSize: fontSize + 'px'}">{{name}}</h1>
+
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+	let vm = new Vue ({
+		el: '#app',
+		data: {
+			name: 'Kev',
+			isActive: false,
+			fontSize: 60
+
+		},
+		methods: {
+			increaseFont() {
+				console.log("dsfs")
+				this.fontSize++;
+				this.isActive = true;
+
+			},
+			decreaseFont() {
+				this.fontSize--;
+				this.isActive = false;
+			}
+			
+		}
+	})
+
+
+</script>
+
+
+
+</html>

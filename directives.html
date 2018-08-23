@@ -1,0 +1,41 @@
+<html>
+  <div id="app">
+  	<h1>{{message}}</h1>
+
+  	<a v-bind:href="url">{{url}}</a>
+
+  	<h1 v-on:click="number++">{{number}}</h1>
+  		<!-- shorthand for v-on -->
+  	  <h1 @:click="number--">{{number}}</h1>
+
+
+  	  <form @submit.prevent="number++">
+  	  	<button >click</button>
+
+  	  </form>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+	let vm = new Vue ({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			url: 'https://google.com',
+			number: 10,
+
+		}
+	})
+
+
+</script>
+
+
+
+</html>

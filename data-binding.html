@@ -1,0 +1,34 @@
+<html>
+  <div id="app">
+
+
+  	<a v-bind:href="url">{{url}}</a>
+
+  	<!-- short hand for 'v-bind' -->
+  	<h1 :data="dynamicId">{{dynamicId}}</h1>
+  	
+  	
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+	let vm = new Vue ({
+		el: '#app',
+		data: {
+			url: 'https://google.com',
+			dynamicId: 30,
+
+		}
+	})
+
+
+</script>
+
+
+
+</html>

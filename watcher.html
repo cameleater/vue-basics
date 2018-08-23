@@ -1,0 +1,48 @@
+<html>
+  <div id="app">
+  	<h1>chocobo {{isActive == 'active' ? 'active' : 'not active'}}</h1>
+  	<button @click="change">change</button>
+  	<!-- <h1>{{reverseMessage}}</h1> -->
+
+  	
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script>
+	let vm = new Vue ({
+		el: '#app',
+		data: {
+			message: 'Hello',
+			isActive: 'active',
+
+
+		},
+		methods: {
+			change() {
+				this.isActive == 'active' ? this.isActive = 'inactive' : this.isActive = 'active';
+			}
+		},
+		computed: {
+			reverseMessage() {
+				return this.message.split('').reverse('').join('');
+			}
+		},
+		watch: {
+			isActive: function(newValue) {
+				console.log('has changed to ' + newValue)
+			}
+		}
+	})
+
+
+</script>
+
+
+
+</html>
